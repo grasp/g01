@@ -1,0 +1,48 @@
+<%#coding:utf-8%>
+<!DOCTYPE  html  PUBLIC  "-//W3C//DTD  XHTML  1.0  Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head> 
+    <meta name="viewport" content="width=device-width; initial-scale=1.0"></meta>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>物流零距离用户中心</title>   
+    <meta name="description" content="物流用户中心,货源,有货, 装车,吨位,运价,回程, 零担,整车,司机,驾驶员,竭诚为你服务,准时, 半挂车,前四后八,平板,低栏,中栏,高栏,蓬车,厢式,罐式,集装箱,
+          大件,危险品,冷藏保温,专线,车队,运输,配货,配车, 货运,托运,拉货,天天装,货运公司,运输公司,发货,装车"/>
+    <meta name="keywords" content=" 物流零距离 物流用户中心,货源,有货, 装车,吨位,运价,回程, 零担,整车,司机,驾驶员,竭诚为你服务,准时, 半挂车,前四后八,平板,低栏,中栏,高栏,蓬车,厢式,罐式,集装箱,
+          大件,危险品,冷藏保温,专线,车队,运输,配货,配车, 货运,托运,拉货,天天装,货运公司,运输公司,发货,装车"/>
+<%=render "shared/stylesheet"%>
+  </head> 
+
+  <body>
+    <%=render "shared/topbar"%>  
+
+    <div class="fluid-container">  
+
+      <div class="fluid-sidebar-left">
+        <%=render "/concerncargos/cargo_concern_navi"%>
+      </div>
+
+      <div class="fluid-content">
+        <%if flash[:notice]%>
+          <div>
+            <p class="alert alert-info"><%=flash[:notice]%></p>
+          </div>
+        <%end%>
+        <div class="welcomeboard">
+          <h4><%=session[:user_name]%>,欢迎来到我的关注！目前只能关注货源信息.</h4>
+          <p>目前你订阅接收的email是<%=session[:user_email]%>.</p>
+        </div>
+
+        <%= yield %>         
+
+
+        <%=render "shared/float_show"%>
+
+      </div>
+    </div>
+    <%=render "shared/footer"%>
+
+  </body>
+</html>
+
+

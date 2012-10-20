@@ -1,0 +1,45 @@
+
+<%ietyte=request.env["HTTP_USER_AGENT"]%>   
+
+<div id="float_show" style="display:none;">       
+
+  <%if ietyte.include?("MSIE 6.0")||ietyte.include?("MSIE 7.0") %>
+    <div class="float_close" style="position: absolute;right: 5px;text-align: right;margin:0 5px 20px 5px;">
+
+         <input  type="button" value="OK" id="close1" class="btn btn-success"  ></input>  
+      
+    </div>
+  <br></br>
+  <%else%>
+ 
+    <div class="pull-left" style="display:inline-block;margin-left: 5px;">
+
+       <input  type="button" value="OK" id="close1" class="btn btn-success"  ></input>  
+    </div> 
+
+  <%end%>
+
+ <div id="float_load"></div>
+
+</div>
+
+
+<div id="float_show2" style="display:none;">
+
+  <%if ietyte.include?("MSIE 6.0")||ietyte.include?("MSIE 7.0") %>
+  
+    <div style="position: absolute;right: 5px;text-align: right;"><a  id="close2" class="btn btn-success"   >OK</a>     
+      
+    </div>
+  <%else%>
+ <div class="pull-left" >
+      <input  type="button" value="OK" id="close2" class="btn btn-success"  ></input>          
+ </div> 
+  <%end%>       
+
+
+  <div id="float_load2">
+
+  </div>
+
+</div>

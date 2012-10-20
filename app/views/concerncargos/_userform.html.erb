@@ -1,0 +1,35 @@
+<%= form_for(@concerncargo) do |f| %>
+  <fieldset>
+    <% if @concerncargo.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@concerncargo.errors.count, "error") %> prohibited this userline from being saved:</h2>
+
+        <ul>
+          <% @concerncargo.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+
+    <span class="lineselector">
+
+      <label>请输入关注的用户名:</label>
+      <input type="text" name="username" value=""></input>
+      <input type="hidden" name="concern_type" value="user"></input>
+
+      <%= f.submit("确定",:class=>"btn primary") %>
+
+    </span>
+
+
+
+  </fieldset>
+<% end %>
+     <div>
+        <p>
+          添加你关注的用户并设置了通知功能后，一旦我们发现有该用户发布的最新货源信息，将立刻会用电子邮件通知你，
+         这个功能有助于及时把握商机.此功能目前测试中，服务不稳定请谅解。
+        </p>
+        </div>

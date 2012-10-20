@@ -1,0 +1,23 @@
+
+
+
+<%unless session[:user_id]%>
+
+<%if request.env["HTTP_USER_AGENT"].match(/spider|google/i) %>
+<%Sitedatum.first.inc(:spider,1)%>
+<%end%>
+<%if request.env["HTTP_USER_AGENT"].include?("MSIE 6.0") %>
+<%Sitedatum.first.inc(:ie6,1)%>
+<%elsif request.env["HTTP_USER_AGENT"].include?("MSIE 7.0")%>
+<%Sitedatum.first.inc(:ie7,1)%>
+<%elsif request.env["HTTP_USER_AGENT"].include?("MSIE 8.0")%>
+<%Sitedatum.first.inc(:ie8,1)%>
+<%else%>
+<%unless request.env["HTTP_USER_AGENT"].include?("linux-gnu") %>
+   <%Sitedatum.first.inc(:noneie,1)%>
+<%end%>
+<%end%>
+<%else%>
+<%Sitedatum.first.inc(:loginuser,1) unless session[:user_name]=="admin"%>
+<%end%>
+

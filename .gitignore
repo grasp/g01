@@ -1,0 +1,17 @@
+.bundle
+db/*.sqlite3
+log/*.log.*
+log/*.log
+tmp/**/*
+lib/tasks/*.log
+thin
+public/*.html
+*.html
+vendor/*.zip
+/nbproject/private/
+bin/log/*.log
+bin/tmp/*.pid
+bin/tmp/*.job
+bin/tmp/*.txt
+builder/
+builder/*.*

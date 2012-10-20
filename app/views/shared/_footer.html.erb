@@ -1,0 +1,40 @@
+
+   <div class="footer">
+    <div class="row">
+  <div class="offset6">
+      <span>
+       <!-- <span> 网站持续演进中，敬请保持关注</span>        -->
+        <a href="/users/about">关于物流零距离</a>|
+        <a href="/users/mianze">免责声明</a>|
+        <a href="/users/contact">联系我们</a>|
+       <a  class="btn btn-success small" href="/feedbacks/new"><b>宝贵建议</b></a>|
+         <b style="font-size: smaller;margin-left: 10px;"> 浙ICP11011330 备</b>   
+       手机访问和电脑访问效果一样|
+      </span>
+ </div>
+</div>
+
+</div>
+
+
+ <%if Rails.env.production?%>
+ <%#= javascript_include_tag 'jquery-1.4.2.min.js' %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%#= javascript_include_tag 'jquery-1.4.2.min.js' %>
+ <%#=javascript_include_tag "jquery-1.4.2.min.js","jquery.form","jquery.validate","myvalidate","g1",:cache => "all" %>
+ <%= yield :scripts %>
+<%else%>
+  <%= javascript_include_tag "application.js" %>   
+  <%#= javascript_include_tag 'jquery-1.4.2.min.js' %>
+  <%#= javascript_include_tag "jquery.form.js" %>
+  <%#= javascript_include_tag "jquery.validate.js " %>
+  <%#= javascript_include_tag "myvalidate.js " %>
+  <%#= javascript_include_tag "zz-g1.js" %>   
+  <%#= javascript_include_tag "bootstrap-tab.js" %>   
+
+  <%#=javascript_include_tag "jquery-1.4.2.min.js","jquery.form","jquery.validate","myvalidate","g1",:cache => "all" %>
+
+<%= yield :scripts %>
+
+<%end%>
