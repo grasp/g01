@@ -3,7 +3,7 @@ require 'rubygems'
 
 source 'http://ruby.taobao.org'
 
-gem 'rails', '3.2.1'
+gem 'rails', '3.2.8'
 gem "railties", '~>3.2.1'
 gem "builder","3.0.0"
 gem "ffi","1.0.9"
