@@ -4,15 +4,15 @@ require 'rubygems'
 source 'http://ruby.taobao.org'
 
 gem 'rails', '3.2.8'
-gem "railties", '~>3.2.1'
+gem "railties", '~>3.2.8'
 gem "builder","3.0.0"
 gem "ffi","1.0.9"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   "3.2.3"
-  gem 'coffee-rails' , "~> 3.2.1"
-  gem 'uglifier', "1.0.4"
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier', "~>1.0.4"
 end
 gem 'closure-compiler'
 
@@ -44,6 +44,7 @@ gem "bson_ext", "~> 1.2"
 gem 'eventmachine', "0.12.10"
 else
   gem 'watir'
+  gem 'thin'
 end
 
 #dameon and every task
