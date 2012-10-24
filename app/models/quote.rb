@@ -22,9 +22,8 @@ class Quote
       # for future usage
       field :ismailed,:type=>Boolean
       field :isaccepted,:type=>Boolean
-      
-      index [[:cargo_id,Mongo::ASCENDING],[:truck_id,Mongo::ASCENDING]]
 
+      index({cargo_id: 1,truck_id: 1})
       
     validate :check_unique, :on=>:create
   def check_unique

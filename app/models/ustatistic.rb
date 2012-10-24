@@ -17,7 +17,7 @@ class Ustatistic
       field :user_email,:type=>String
       field :user_name,:type=>String
       
-      index ([[:user_id,Mongo::ASCENDING],[:user_email,Mongo::ASCENDING],[:user_name,Mongo::ASCENDING]])
+    #  index ([[:user_id,Mongo::ASCENDING],[:user_email,Mongo::ASCENDING],[:user_name,Mongo::ASCENDING]])
   
-
+     index({user_id: 1,user_email: 1,user_name: 1})
 end

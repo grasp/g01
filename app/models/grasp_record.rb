@@ -22,7 +22,8 @@ include Mongoid::Timestamps
       field :trucks_lines,:type=>Array
        field :from_site,:type=>String
       
-       index ([[:from_site,Mongo::ASCENDING],[:created_at,Mongo::ASCENDING]])
+       #index ([[:from_site,Mongo::ASCENDING],[:created_at,Mongo::ASCENDING]])
+       index({from_site: 1,created_at: 1})
      # timestamps!    
 
 end

@@ -29,10 +29,12 @@ gem 'redis', '2.2.1'
 gem 'bson' , "~>1.5.2"
 gem 'redis-store', "~>1.0.0.rc1"
 
-gem 'mongo', '1.5.2'
-gem "mongoid", "~>2.4.5"
-#gem 'memcache-client'
-#gem 'unicorn'
+
+#mongodb related gem
+gem 'mongo'
+gem 'bson_ext'
+gem "mongoid"
+
 gem "webrobots", "~> 0.0.10"#, :git => 'http://github.com/knu/webrobots.git'
 #gem "webrobots","0.0.11"
 

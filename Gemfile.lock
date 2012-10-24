@@ -31,13 +31,15 @@ GEM
     addressable (2.3.2)
     arel (3.0.2)
     bson (1.5.2)
+    bson_ext (1.5.2)
+      bson (= 1.5.2)
     builder (3.0.0)
-    carrierwave (0.6.2)
+    carrierwave (0.7.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
-    carrierwave-mongoid (0.2.1)
-      carrierwave (~> 0.6.1)
-      mongoid (~> 2.1)
+    carrierwave-mongoid (0.1.0)
+      carrierwave
+      mongoid
     childprocess (0.3.6)
       ffi (~> 1.0, >= 1.0.6)
     closure-compiler (1.1.7)
@@ -47,7 +49,7 @@ GEM
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.3.3)
+    coffee-script-source (1.4.0)
     commonwatir (4.0.0)
     daemons (1.1.9)
     domain_name (0.5.4)
@@ -86,18 +88,21 @@ GEM
       subexec (~> 0.2.1)
     mongo (1.5.2)
       bson (= 1.5.2)
-    mongoid (2.4.12)
+    mongoid (3.0.9)
       activemodel (~> 3.1)
-      mongo (<= 1.6.2)
+      moped (~> 1.1)
+      origin (~> 1.0)
       tzinfo (~> 0.3.22)
     mongoid_spacial (0.2.16)
       activesupport (~> 3.0)
       mongoid (>= 2.3.0)
+    moped (1.2.7)
     multi_json (1.3.6)
     net-http-digest_auth (1.2.1)
     net-http-persistent (2.8)
     nokogiri (1.5.5-x86-mingw32)
     ntlm-http (0.1.1)
+    origin (1.0.9)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -207,6 +212,7 @@ PLATFORMS
 
 DEPENDENCIES
   bson (~> 1.5.2)
+  bson_ext
   builder (= 3.0.0)
   carrierwave
   carrierwave-mongoid
@@ -217,8 +223,8 @@ DEPENDENCIES
   geocoder
   gmaps4rails
   mechanize
-  mongo (= 1.5.2)
-  mongoid (~> 2.4.5)
+  mongo
+  mongoid
   mongoid_spacial (~> 0.2.16)
   rails (= 3.2.8)
   rails_kindeditor

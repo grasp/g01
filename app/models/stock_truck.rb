@@ -62,7 +62,7 @@ class StockTruck
   #to identify group    
   field :truckgroup_id
   field :group
-  spacial_index :loc
+  #spacial_index :loc
   validates_uniqueness_of :paizhao ,:message=>"该牌照车子已经存在."
 
 end

@@ -10,6 +10,7 @@ class Wmail
   field :fromname, :type => String
   field :mailtype,:type => String #invite,cargo,truck,or others 
   
-  index ([[:from,Mongo::ASCENDING],[:to,Mongo::ASCENDING],[:created_at,Mongo::ASCENDING]])
+  #index ([[:from,Mongo::ASCENDING],[:to,Mongo::ASCENDING],[:created_at,Mongo::ASCENDING]])
+  index({from: 1,to: 1,created_at: 1})
  
 end

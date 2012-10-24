@@ -6,5 +6,6 @@ class Emaillistc
      field :email, :type=>String
      field :cargolist, :type=>Array
      field :csize, :type=>Integer
-     index :email, unique: true#, drop_dups: true
+
+     index ({ email: 1 }, { unique: true})
 end
