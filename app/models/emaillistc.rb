@@ -7,5 +7,5 @@ class Emaillistc
      field :cargolist, :type=>Array
      field :csize, :type=>Integer
 
-     index ({ email: 1 }, { unique: true})
+     index({ email: 1}, { unique: true })
 end

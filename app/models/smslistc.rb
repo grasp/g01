@@ -5,5 +5,6 @@ class Smslistc
  
      field :phone, :type=>String
      field :cargolist, :type=>Array
-     index :phone, unique: true
+    # index :phone, unique: true
+     index({ phone: 1 },{ unique: true })
 end

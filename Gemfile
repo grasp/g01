@@ -59,6 +59,7 @@ gem 'request-log-analyzer'
 gem "geocoder"
 gem "gmaps4rails"
 gem 'mongoid_spacial',"~>0.2.16"
+
 #gem 'tinymce-rails'
 #gem "ckeditor", "3.7.0.rc3"
 #gem 'mongoid-paperclip', :require => 'mongoid_paperclip'

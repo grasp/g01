@@ -46,9 +46,11 @@ class User
   
   def self.authenticate(email_or_name,password)
     if(email_or_name.match(/.*@.*\..*/))
-     user=self.first(:conditions => { :email=>email_or_name.to_s })     
+    # user=self.first(:conditions => { :email=>email_or_name.to_s }) 
+    user=self.where(:email=>email_or_name.to_s).first   
     else
-      user=self.first(:conditions => { :name=>email_or_name.to_s })
+    #  user=self.first(:conditions => { :name=>email_or_name.to_s })
+     user=self.where(:name=>email_or_name.to_s).first 
     end
 
     if user
